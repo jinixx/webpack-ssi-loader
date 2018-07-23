@@ -1,5 +1,5 @@
 {
-  "name": "ssi-loader",
+  "name": "webpack-ssi-loader",
   "version": "0.0.1",
   "description": "Webpack SSI loader",
   "main": "index.js",
