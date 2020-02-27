@@ -15,11 +15,12 @@ function getLoaderConfig(context) {
 	return assign(query, config);
 }
 
-module.exports = function (source) {
+module.exports = async function (source) {
   const config = getLoaderConfig(this);
 	const ssi = new SSI(config);
 
 	this.cacheable && this.cacheable();
-
-	return ssi.compile(source);
+	const res = await ssi.compile(source);
+	
+	return res;
 };
